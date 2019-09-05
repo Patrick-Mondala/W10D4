@@ -1,0 +1,35 @@
+<section class="login-screen">
+    <div class="login-box">
+    <h1>Create an account</h1>
+    <form action="<%= users_url %>" method="POST">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+        <section class="username-field">
+            <label>
+                Username
+                <input type="text" name="user[username]">
+            </label>
+        </section>
+
+        <br>
+
+        <section class="password-field">
+            <label>
+                Password
+                <input type="password" name="user[password]">
+            </label>
+        </section>
+
+        <br>
+        <section class="errors-list">
+          <ul class="errors-signup">
+          <% if flash[:errors] %>
+              <% flash[:errors].each do |error| %>
+                  <li><%= error %></li>
+              <% end %>
+          <% end %>
+          </ul>
+        </section>
+        <input class="login-btn" type="submit" value="sign up!">
+    </form>
+</section>

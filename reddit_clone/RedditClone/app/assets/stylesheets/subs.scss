@@ -1,0 +1,25 @@
+// Place all the styles related to the Subs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.form-sub {
+    display: flex;
+    justify-content: space-around;
+}
+.subhead {
+  color: yellow;
+}
+
+.form-sub-box {
+  color: yellow;
+    width: 500px;
+    margin: 50px;
+    text-align: center;
+    padding: 50px;
+    background-color: green;
+}
+
+#description {
+    height: 100px;
+    width: 200px;
+    max-width: 100%;
+}

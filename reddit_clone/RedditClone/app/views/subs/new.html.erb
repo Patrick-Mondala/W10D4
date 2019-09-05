@@ -1,0 +1,35 @@
+<section class="form-sub">
+    <div class="form-sub-box">
+        <h1 class="subhead">Make a sub</h1>
+        <form action="<%= subs_url %>" method="POST">
+            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+            <label>
+                Title
+                <br>
+                <input type="text" name="sub[title]">
+            </label>
+
+            <br>
+
+            <label>
+                Description
+                <br>
+                <textarea id="description" name="sub[description]"></textarea>
+            </label>
+
+            <br>
+
+            <section class="errors-list">
+                <ul class="errors">
+                <% if flash[:errors] %>
+                    <% flash[:errors].each do |error| %>
+                        <li><%= error %></li>
+                    <% end %>
+                <% end %>
+                </ul>
+            </section>
+
+            <input type="submit" value="Make sub">
+        </form>
+    </div>
+</section>

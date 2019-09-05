@@ -1,0 +1,36 @@
+/* PHASE 2: Notifications */
+.header {
+    z-index: 1;
+    position: relative;
+}
+
+.badge {
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  padding: 0 5px 0 5px;
+  width: 50px;
+}
+
+.header-list li:first-of-type:hover .badge {
+    background-color: red;
+}
+
+.header-list li:first-of-type:hover .notifications {
+    display: block;
+}
+
+.notifications {
+    display: none;
+    position: absolute;
+    background-color: white;
+    color: black;
+}
+
+.notifications li {
+    padding: 5px 10px 5px 10px;
+}
+
+.notifications li:hover {
+    background-color: gray;
+}
